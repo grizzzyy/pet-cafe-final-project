@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe - Paws & Brews Cafe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-brand">
+            <!-- Logo Image -->
+            <img src="logomapache.jpg" alt="Logo" class="logo" style="height: 50px; width: auto;">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="adopt.html">Adopt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cafe.html">Cafe</a>
+                </li>
+                <!-- Cart Icon with Item Count -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="badge badge-light">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content for Cafe Page -->
+    <div class="container">
+        <h1>Welcome to Our Cafe!</h1>
+        <p>Relax, enjoy a cup of coffee, and make new furry friends!</p>
+
+        <h3>Our Menu</h3>
+        <div class="row">
+            <!-- Espresso -->
+            <div class="col-md-4 menu-item">
+                <img src="raccoonEspresso.jpg" alt="Espresso" class="img-fluid">
+                <h4>Espresso</h4>
+                <p>Strong, rich, and full of flavor, perfect for a quick boost.</p>
+                <button class="btn btn-primary add-to-cart" data-item="Espresso">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            
+            <!-- Cappuccino -->
+            <div class="col-md-4 menu-item">
+                <img src="cappu.jpeg" alt="Cappuccino" class="img-fluid">
+                <h4>Cappuccino</h4>
+                <p>A perfect blend of espresso, steamed milk, and foam. Deliciously smooth.</p>
+                <button class="btn btn-primary add-to-cart" data-item="Cappuccino">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            
+            <!-- Latte -->
+            <div class="col-md-4 menu-item">
+                <img src="latte.jpeg" alt="Latte" class="img-fluid">
+                <h4>Latte</h4>
+                <p>Espresso with steamed milk for a creamy and comforting taste.</p>
+                <button class="btn btn-primary add-to-cart" data-item="Latte">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Tea -->
+            <div class="col-md-4 menu-item">
+                <img src="raccoonBerry.jpg" alt="Tea" class="img-fluid">
+                <h4>Tea</h4>
+                <p>Enjoy a variety of loose-leaf teas for the perfect calming experience.</p>
+                <button class="btn btn-primary add-to-cart" data-item="Tea">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Pastries -->
+            <div class="col-md-4 menu-item">
+                <img src="berryraccoon.jpg" alt="Pastries" class="img-fluid">
+                <h4>Pastries</h4>
+                <p>Freshly baked pastries to pair with your drink for a delightful treat.</p>
+                <button class="btn btn-primary add-to-cart" data-item="Pastries">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Sandwiches -->
+            <div class="col-md-4 menu-item">
+                <img src="sando.jpg" alt="Sandwich" class="img-fluid">
+                <h4>Sandwiches</h4>
+                <p>Made-to-order sandwiches with your choice of fillings. Perfect for lunch!</p>
+                <button class="btn btn-primary add-to-cart" data-item="Espresso">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+                
+            </div>
+        </div>
+
+        <h3>Visit Us!</h3>
+        <p>Our cozy cafe is the perfect place to hang out with friends and adopt a pet!</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Paws & Brews Cafe | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+            <a href="https://www.tiktok.com" target="_blank" class="fab fa-tiktok"></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

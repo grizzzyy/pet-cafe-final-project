@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffb3b3;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logomapache.jpg" alt="Logo" class="logo" style="height: 50px; width: auto;">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adopt.html">Adopt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cafe.html">Cafe</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="container my-5">
+        <h1 class="text-center">Adoption Form</h1>
+        <p class="text-center">You are adopting: <span id="pet-name" class="fw-bold"></span></p>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            
+            <!-- Pet Name Dropdown -->
+            <div class="mb-3">
+                <label for="pet-name-select" class="form-label">Pet Name</label>
+                <select id="pet-name-select" class="form-control" required>
+                    <option value="" disabled selected>Select a pet</option>
+                    <option value="Dog">Buddy</option>
+                    <option value="Cat">Whiskers</option>
+                    <option value="Raccoon">Lia</option>
+                    <option value="Raccoon 2">Mittens</option>
+                    <option value="Rabbit">Hope</option>
+                    <option value="Small dog">Max</option>
+                    <option value="Witch Cat">Luna</option>
+                    <option value="Witch Opossum">Bella</option>
+                    <option value="Raccoon 3">Pancho</option>
+                    <option value="Parrot">Chirpy</option>
+                    <option value="Frog">Kody</option>
+                    <option value="Chick">Fluffy</option>
+                </select>
+            </div>
+
+            <!-- Animal Type Dropdown -->
+            <div class="mb-3">
+                <label for="animal-type" class="form-label">Animal Type</label>
+                <select id="animal-type" class="form-control" required>
+                    <option value="" disabled selected>Select the animal type</option>
+                    <option value="Raccoon">Raccoon</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Opossum">Opossum</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Frog">Frog</option>
+                    <option value="Chick">Chick</option>
+                    <option value="Raccoon">Rabbit</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" id="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Cancel Confirmation Modal -->
+    <div id="cancel-modal" class="modal" tabindex="-1" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Are you sure?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="sideeye.jpg" alt="Are you sure?" class="img-fluid mb-3" style="max-width: 100%;">
+                    <p>No furry friend?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <a href="adopt.html" class="btn btn-danger">Yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Retrieve pet name from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const petName = urlParams.get("pet");
+        // Display pet name if available in the URL
+        document.getElementById("pet-name").textContent = petName ? petName : "Unknown";
+
+        // Cancel button behavior
+        const cancelButton = document.getElementById("cancel-button");
+        const cancelModal = document.getElementById("cancel-modal");
+
+        cancelButton.addEventListener("click", () => {
+            cancelModal.style.display = "block";
+        });
+
+        cancelModal.addEventListener("click", (e) => {
+            if (e.target.classList.contains("modal") || e.target.dataset.bsDismiss === "modal") {
+                cancelModal.style.display = "none";
+            }
+        });
+
+        // Handling the form submit
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const petNameSelected = document.getElementById('pet-name-select').value;
+            const animalTypeSelected = document.getElementById('animal-type').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            alert(`Adoption Request Submitted!\nName: ${name}\nEmail: ${email}\nPet Name: ${petNameSelected}\nAnimal Type: ${animalTypeSelected}`);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* General Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+body {
+    background-color: #ffe0b3; /* Peachy background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #ffb3b3;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e63946; /* Red on hover */
+}
+
+/* Font for Welcome and Menu Text */
+h1, h2, .menu-section h3 {
+    font-family: 'Lobster', cursive; /* Change font to Lobster */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #e63946; /* Deep red for Welcome message */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive; /* Handwritten-like font for relaxation message */
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Menu Heading */
+.menu-section h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #e63946; /* Same deep red */
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.btn.add-to-cart {
+    background-color: #ffb6b9; /* Soft Coral */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.btn.add-to-cart i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.btn.add-to-cart:hover {
+    background-color: #e63946; /* Hover color */
+}
+
+.menu-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu-item h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Main Content for Menu Section */
+h3 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ffb3b3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer .social-links a:hover {
+    color: #e63946; /* Red on hover */
+}
+
+/* Parallax Section for Homepage */
+.intro-section {
+    background-image: url('outsidecafe.JPG'); /* Use your desired image path */
+    background-attachment: fixed; /* Enables the parallax effect */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh; /* Full viewport height for dramatic parallax */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Align text in the center */
+}
+
+.intro-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.intro-section p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Welcome Text Styling - Home Page */
+.home h1 {
+    font-family: 'Poppins', sans-serif; /* Regular, readable font */
+    font-size: 3.5rem; /* Size adjustment for emphasis */
+    color: #e63946; /* Deep red */
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center text */
+    line-height: 1.2; /* Adjust line height for readability */
+    padding-top: 20px; /* Add space above */
+}
+
+/* Welcome Text Styling - Cafe Page */
+.cafe h1 {
+    font-family: 'Dancing Script', cursive; /* Cursive font for cafe page */
+    font-size: 3.5rem; /* Slightly larger for emphasis */
+    color: #e63946; /* Deep red */
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center text */
+    line-height: 1.2; /* Adjust line height for readability */
+    padding-top: 20px; /* Add space above */
+}
+
+/* Mobile Optimization for Parallax */
+@media (max-width: 768px) {
+    .intro-section {
+        background-attachment: scroll; /* Default behavior on mobile */
+        height: auto; /* Allow natural height adjustment */
+    }
+}
